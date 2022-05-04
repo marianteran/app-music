@@ -45,7 +45,7 @@ const SongSearch = () => {
 
   return (
     <div >
-      <h2 style={{textAlign:"center", marginTop:40, marginBottom:40}}>Buscador de canciones</h2>
+      <h2 >Buscador de Canciones</h2>
       <article className="grid-1-3">
         <SongForm handleSearch={handleSearch} />
         {loading && <Loader />}

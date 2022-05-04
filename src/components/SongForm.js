@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import swal from 'sweetalert';
 
 const initialForm = {
   artist: "",
@@ -18,7 +19,8 @@ const SongForm = ({ handleSearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.artist || !form.song) {
-      alert("datos incompletos");
+      //alert("datos incompletos");
+      swal("Datos incompletos !");
       return;
     }
 
@@ -44,7 +46,7 @@ const SongForm = ({ handleSearch }) => {
           value={form.song}
         />
 
-        <input type="submit" value="buscar" />
+        <input type="submit" value="search" className="btn" />
       </form>
     </div>
   );

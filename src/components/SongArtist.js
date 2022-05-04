@@ -5,7 +5,7 @@ const SongArtist = ({ artista }) => {
   return (
     <>
       <section className="artist">
-        <h2>{artista.strArtist}</h2>
+        <h3>{artista.strArtist}</h3>
         <img src={artista.strArtistThumb} alt={artista.strArtist} />
 
         <p>
@@ -15,11 +15,11 @@ const SongArtist = ({ artista }) => {
         <p>
           {artista.strGenre} - {artista.strStyle}
         </p>
-        <p>{artista.strBiographyEN}</p>
+        <p className="biografy">{artista.strBiographyES}</p>
 
         <div className="linkss"> 
         <a href={artista.strLastFMChart} target="_blank" rel="noreferrer">
-          musica
+          🎶música
         </a>
         
         <a
@@ -27,7 +27,7 @@ const SongArtist = ({ artista }) => {
           target="_blank"
           rel="noreferrer"
         >
-          web site
+          🌐website
         </a>
         </div>
       </section>

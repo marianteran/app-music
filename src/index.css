@@ -3,6 +3,14 @@ html {
   font-size: 16px;
   font-family: sans-serif;
   
+  
+}
+
+body{
+  background-image: url(./components/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 *,
@@ -24,6 +32,7 @@ textarea {
   font-size: 1rem;
   line-height: 1;
   background-color: transparent;
+  box-shadow: -2px 0px 17px 0px #b27bd4;
 }
 
 textarea {
@@ -31,25 +40,30 @@ textarea {
   resize: none;
 }
 
-button,
-input[type="submit"],
-input[type="reset"] {
-  border: thin solid #444;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem 0 0;
-  display: inline-block;
-  background-color: #eee;
-  color: #444;
-  font-weight: bold;
-  font-size: 1rem;
-  line-height: 1;
-  text-transform: none;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
+.btn{
+  box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9752cc;
+  margin-top: 20px;
   
+}
+
+.btn:hover 
+{
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+  color: #8933cfee;
 }
 
 form {
@@ -109,7 +123,6 @@ td {
     grid-template-columns: 1fr 1fr ;
     align-items: start;
     gap: 2rem;
-    background-color: red;
     padding: 20px;
 }
 
@@ -125,20 +138,39 @@ td {
 }
 
 
-h2{
-  text-transform: uppercase;
+h3{
+  text-transform:capitalize;
   text-align: center;
   margin-bottom: 20px;
+  color: rgb(181, 71, 254);
+  font-size: 30px;
 }
 
+h2{
+  color: #8933cfee;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 5px 1px 5px rgba(209, 125, 245, 0.968);
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin: 8% auto 5% auto;
+}
+
+.biografy{
+  line-height: 30px;
+  text-align: justify;
+}
 a{
   text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .linkss{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 1024px) {
@@ -148,7 +180,7 @@ a{
     grid-template-columns: 30% 1fr;
     align-items: start;
     gap: 2rem;
-    background-color: blue;
+    
     
   }
 }
@@ -162,6 +194,7 @@ a{
       grid-template-columns: 1fr ;
       align-items: start;
       gap: 2rem;
-      background-color: yellow;
+      padding: 2px 20px;
+    
   }
 }

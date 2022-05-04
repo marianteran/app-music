@@ -4,7 +4,7 @@ const SongLyric = ({ title, letra }) => {
   return (
     <>
       <section className="lytics">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
 
         <blockquote style={{ whiteSpace: "pre-wrap" }}>{letra}</blockquote>
       </section>
