@@ -1,14 +1,11 @@
 import React from "react";
 
-const SongLyric = ({ title, letra }) => {
+const SongLyric = ({ title, lyrics }) => {
   return (
-    <>
-      <section className="lytics">
-        <h3>{title}</h3>
-
-        <blockquote style={{ whiteSpace: "pre-wrap" }}>{letra}</blockquote>
-      </section>
-    </>
+    <section>
+      <h3>{title}</h3>
+      <blockquote style={{ whiteSpace: "pre-wrap" }}>{lyrics}</blockquote>
+    </section>
   );
 };
 

@@ -1,25 +1,63 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Music",
+  "name": "App Music",
+  "description":"App music prueba de PWA",
+  "categories":["lifestyle", "music"],
+  "dir":"ltr",
+  "display_override":["standalone","fullscreen"],
+  "display": "standalone",
+  "theme_color": "#dc80ff",
+  "background_color": "#efb0ff",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "./icon_1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "./icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "./icon_384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_360.png",
+      "sizes": "360x630",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "lang": "es-ES",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url":"/?source=pwa",
+  "id":"/?source=pwa"
 }

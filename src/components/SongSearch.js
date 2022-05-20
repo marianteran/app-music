@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import SongForm from "./SongForm";
-import SongDetails from "./SongDetails";
-import Loader from "./Loader";
 import { helpHttp } from "../helpers/helpHttp";
+import Loader from "./Loader";
+import SongDetails from "./SongDetails";
+import SongForm from "./SongForm";
+import Btn from "./Btn";
+
+
 
 const SongSearch = () => {
   const [search, setSearch] = useState(null);
@@ -10,16 +13,12 @@ const SongSearch = () => {
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSearch = (data) => {
-    //console.log(data)
-    setSearch(data);
-  };
+
+ 
 
   useEffect(() => {
-    if (search === null) {
-      return;
-    }
-
+    if (search === null) return;
+    
     const fetchData = async () => {
       const { artist, song } = search;
 
@@ -35,26 +34,30 @@ const SongSearch = () => {
       ]);
       //console.log(artistRes)
       //console.log(songRes)
-      setBio(artistRes)
-      setLyric(songRes)
+      setBio(artistRes);
+      setLyric(songRes);
       setLoading(false);
     };
 
     fetchData();
   }, [search]);
 
+  const handleSearch = (data) => {
+    //console.log(data)
+    setSearch(data);
+  };
+
   return (
-    <div >
-      <h2 >Buscador de Canciones</h2>
-      <article className="grid-1-3">
-        <SongForm handleSearch={handleSearch} />
-        {loading && <Loader />}
-
-        {/* si search tiene algo y loading sea false quiero q muestres SongDetails */}
-        {search && !loading && (<SongDetails search={search} lyric={lyric} bio={bio} />)}
-      </article>
-
-    </div>
+    <div>
+    <h2>Buscador</h2>
+    <article className="grid-1-3">
+      <SongForm handleSearch={handleSearch} />
+      {loading && <Loader />}
+      {search && !loading && (
+        <SongDetails search={search} lyric={lyric} bio={bio} />
+      )}
+    </article>
+  </div>
   );
 };
 

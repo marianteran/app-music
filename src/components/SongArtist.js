@@ -1,29 +1,29 @@
 import React from "react";
 
-const SongArtist = ({ artista }) => {
-  //console.log(artista)
+const SongArtist = ({ artist }) => {
+  //console.log(artist)
   return (
     <>
       <section className="artist">
-        <h3>{artista.strArtist}</h3>
-        <img src={artista.strArtistThumb} alt={artista.strArtist} />
+      <h3>{artist.strArtist}</h3>
+      <img src={artist.strArtistThumb} alt={artist.strArtist} />
 
         <p>
-          {artista.intBornYear} - {artista.intDeadYear || "Presente"}{" "}
+        {artist.intBornYear} - {artist.intDiedYear || "Presente"}
         </p>
-        <p>{artista.strCountry}</p>
+        <p>{artist.strCountry}</p>
         <p>
-          {artista.strGenre} - {artista.strStyle}
+        {artist.strGenre} - {artist.strStyle}
         </p>
-        <p className="biografy">{artista.strBiographyES}</p>
+        <p className="biografy">{artist.strBiographyEN}</p>
 
         <div className="linkss"> 
-        <a href={artista.strLastFMChart} target="_blank" rel="noreferrer">
+        <a href={artist.strLastFMChart} target="_blank" rel="noreferrer">
           🎶música
         </a>
         
         <a
-          href={`http://${artista.strWebsite}`}
+          href={`http://${artist.strWebsite}`}
           target="_blank"
           rel="noreferrer"
         >
